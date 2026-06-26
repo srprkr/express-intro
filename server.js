@@ -17,6 +17,10 @@ app.get("/about", (req, res) => {
 });
 
 
+app.get("/users", (req, res) => {
+  res.send("Users page")
+})
+
 // users api
 app.get("/api/users", (req, res) => {
   res.json([
