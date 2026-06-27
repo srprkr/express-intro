@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express()
 
+app.set("view engine", "ejs")
+
 // A simple route
 app.get("/", (req, res) => {
   res.send("Hello from Express!")
@@ -18,7 +20,11 @@ app.get("/about", (req, res) => {
 
 
 app.get("/users", (req, res) => {
-  res.send("Users page")
+  const users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" }
+  ]
+  res.render("users", { users })
 })
 
 // users api

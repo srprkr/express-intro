@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Users</title>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background: #f5f5f5; }
+    h1 { margin-bottom: 1rem; }
+    .cards { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      min-width: 150px;
+    }
+    .card h2 { margin: 0 0 0.5rem; }
+    .card p { margin: 0; color: #666; }
+  </style>
+</head>
+<body>
+  <h1>Users</h1>
+  <div class="cards">
+    <% users.forEach(user => { %>
+      <div class="card">
+        <h2><%= user.name %></h2>
+        <p>ID: <%= user.id %></p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
