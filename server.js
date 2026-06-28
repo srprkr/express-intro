@@ -8,12 +8,6 @@ app.get("/", (req, res) => {
   res.send("Hello from Express!")
 })
 
-// Start the server
-app.listen(3000, () =>  {
-  console.log("Listening on http://localhost:3000")
-})
-
-
 app.get("/about", (req, res) => {
   res.send("About page")
 });
@@ -39,3 +33,8 @@ app.get("/api/users", (req, res) => {
 app.use((req, res) => {
   res.status(404).send("Sorry, page not found")
 });
+
+// Start the server
+app.listen(3000, () =>  {
+  console.log("Listening on http://localhost:3000")
+})
